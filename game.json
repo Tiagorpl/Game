@@ -1,5 +1,5 @@
 {
-  "firstLayout": "scnPrincipal",
+  "firstLayout": "Main",
   "gdVersion": {
     "build": 99,
     "major": 4,
@@ -5659,6 +5659,17 @@
           "value": "w"
         }
       ]
+    },
+    {
+      "name": "Checkpoints",
+      "type": "structure",
+      "children": [
+        {
+          "name": "Game1",
+          "type": "boolean",
+          "value": false
+        }
+      ]
     }
   ],
   "layouts": [
@@ -5685,7 +5696,7 @@
         "gridColor": 0,
         "gridAlpha": 0.5,
         "snap": true,
-        "zoomFactor": 0.5899999847412108,
+        "zoomFactor": 0.6149999847412109,
         "windowMask": false
       },
       "objectsGroups": [
@@ -5724,8 +5735,8 @@
           "name": "Mindy",
           "persistentUuid": "1280b677-7168-488e-a7a0-05efad670a43",
           "width": 128,
-          "x": 964,
-          "y": 1332,
+          "x": 948.5,
+          "y": 450.75,
           "zOrder": 1200,
           "numberProperties": [],
           "stringProperties": [],
@@ -9546,6 +9557,54 @@
           "x": 750,
           "y": 1620,
           "zOrder": 5033,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 93,
+          "layer": "Obstacle",
+          "locked": false,
+          "name": "BlockProgressGame1Obstacle",
+          "persistentUuid": "ef66d57a-1695-49bb-9de5-676a846480e6",
+          "width": 187,
+          "x": 637.5,
+          "y": 201.25,
+          "zOrder": 5017,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Obstacle",
+          "locked": false,
+          "name": "BlockProgressGame1Obstacle",
+          "persistentUuid": "2301e7aa-7b92-41be-a102-a1bec2686cb5",
+          "width": 0,
+          "x": 750,
+          "y": 262.5,
+          "zOrder": 5017,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Obstacle",
+          "locked": false,
+          "name": "BlockProgressGame1Obstacle",
+          "persistentUuid": "2d22b343-0d5b-4848-b861-ea8745830793",
+          "width": 0,
+          "x": 862.5,
+          "y": 318.75,
+          "zOrder": 5017,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -26854,6 +26913,70 @@
           ]
         },
         {
+          "name": "BlockProgressGame1Obstacle",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "NavMeshPathfindingObstacleBehavior",
+              "type": "NavMeshPathfinding::NavMeshPathfindingObstacleBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.07999999821186066,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Obstacle4x1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 32,
+                            "y": 0
+                          },
+                          {
+                            "x": 160,
+                            "y": 64
+                          },
+                          {
+                            "x": 128,
+                            "y": 80
+                          },
+                          {
+                            "x": 0,
+                            "y": 16
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "TileColumnObstacle",
           "tags": "",
           "type": "Sprite",
@@ -27668,7 +27791,20 @@
               },
               "parameters": [
                 "Mindy",
-                "Obstacle"
+                "Obstacle",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "Mindy",
+                "BlockProgressGame1Obstacle",
+                ""
               ],
               "subInstructions": []
             }
@@ -27906,10 +28042,11 @@
             {
               "type": {
                 "inverted": false,
-                "value": "Cache"
+                "value": "Delete"
               },
               "parameters": [
-                "GoldStarBat"
+                "GoldStarBat",
+                ""
               ],
               "subInstructions": []
             },
@@ -27921,6 +28058,58 @@
               "parameters": [
                 "FindBat",
                 "True"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "PushScene"
+              },
+              "parameters": [
+                "",
+                "\"scnRegisto\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Arreter"
+              },
+              "parameters": [
+                "Mindy"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "BlockProgressGame1Obstacle",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "GlobalVariableAsBoolean"
+              },
+              "parameters": [
+                "Checkpoints.Game1",
+                "True"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Delete"
+              },
+              "parameters": [
+                "BlockProgressGame1Obstacle",
+                ""
               ],
               "subInstructions": []
             }
@@ -28865,6 +29054,18 @@
                 "\"Timoteo\""
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"scnLogin\"",
+                ""
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -28989,12 +29190,11 @@
             {
               "type": {
                 "inverted": false,
-                "value": "Scene"
+                "value": "PushScene"
               },
               "parameters": [
                 "",
-                "\"scnPrincipal\"",
-                ""
+                "\"scnLogin\""
               ],
               "subInstructions": []
             }
@@ -29083,8 +29283,8 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "scnPrincipal",
-      "name": "scnPrincipal",
+      "mangledName": "scnLogin",
+      "name": "scnLogin",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
@@ -29606,6 +29806,27 @@
                 "VariableString(enderecoAPI)+\"/utilizador/\"+txtEmail.Text()+\"/\"+ Hash::GenerateHashSHA256(txtPassword.Text())",
                 "",
                 ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "PopScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetGlobalVariableAsBoolean"
+              },
+              "parameters": [
+                "Checkpoints.Game1",
+                "True"
               ],
               "subInstructions": []
             }
@@ -66508,8 +66729,8 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Nivel1",
-      "name": "Nivel1",
+      "mangledName": "Quizz",
+      "name": "Quizz",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
@@ -68422,8 +68643,8 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Resultados",
-      "name": "Resultados",
+      "mangledName": "ResultadosQuizz",
+      "name": "ResultadosQuizz",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
@@ -68820,8 +69041,8 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "menu",
-      "name": "menu",
+      "mangledName": "MenuQuizz",
+      "name": "MenuQuizz",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
@@ -69104,8 +69325,8 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Start_32Screen",
-      "name": "Start Screen",
+      "mangledName": "StartScreenNuvens",
+      "name": "StartScreenNuvens",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
@@ -69646,8 +69867,8 @@
     {
       "b": 0,
       "disableInputWhenNotFocused": true,
-      "mangledName": "InGame",
-      "name": "InGame",
+      "mangledName": "InGameNuvens",
+      "name": "InGameNuvens",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
@@ -70676,8 +70897,8 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "End_32Screen",
-      "name": "End Screen",
+      "mangledName": "EndScreenNuvens",
+      "name": "EndScreenNuvens",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
@@ -70791,8 +71012,8 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Scene_321",
-      "name": "Scene 1",
+      "mangledName": "ForcaStartScreen",
+      "name": "ForcaStartScreen",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
@@ -70954,8 +71175,8 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Scene_322",
-      "name": "Scene 2",
+      "mangledName": "ForcaInGame",
+      "name": "ForcaInGame",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
