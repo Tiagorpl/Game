@@ -5488,6 +5488,14 @@
         "name": "NewSprite-1-3.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "disablePreload": false,
+        "file": "Dialogue.json",
+        "kind": "json",
+        "metadata": "",
+        "name": "Dialogue.json",
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -5696,7 +5704,7 @@
         "gridColor": 0,
         "gridAlpha": 0.5,
         "snap": true,
-        "zoomFactor": 0.6149999847412109,
+        "zoomFactor": 0.5149999847412108,
         "windowMask": false
       },
       "objectsGroups": [
@@ -5735,8 +5743,8 @@
           "name": "Mindy",
           "persistentUuid": "1280b677-7168-488e-a7a0-05efad670a43",
           "width": 128,
-          "x": 948.5,
-          "y": 450.75,
+          "x": 986,
+          "y": 1444.5,
           "zOrder": 1200,
           "numberProperties": [],
           "stringProperties": [],
@@ -8821,38 +8829,6 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "Level1",
-          "locked": false,
-          "name": "CloudStart",
-          "persistentUuid": "da8a1525-c2ee-4a75-bd08-2b0c835f9ee6",
-          "width": 0,
-          "x": 150,
-          "y": 225,
-          "zOrder": 5029,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 69,
-          "layer": "Level1",
-          "locked": false,
-          "name": "StarterMessage",
-          "persistentUuid": "54954e0c-827f-4130-8c1c-61c413bd6b71",
-          "width": 300,
-          "x": 262.5,
-          "y": 318.75,
-          "zOrder": 5031,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
           "layer": "",
           "locked": false,
           "name": "Tree",
@@ -9605,6 +9581,38 @@
           "x": 862.5,
           "y": 318.75,
           "zOrder": 5017,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "GoldStarNuvem",
+          "persistentUuid": "21d50b2c-0bc7-4555-8662-b3d794924786",
+          "width": 0,
+          "x": 975,
+          "y": 1500,
+          "zOrder": 5034,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 294,
+          "layer": "",
+          "locked": false,
+          "name": "FloorGrass",
+          "persistentUuid": "f0c5a9c0-7c07-4a96-b197-44b469e255a2",
+          "width": 294,
+          "x": 1425,
+          "y": 337.5,
+          "zOrder": 102,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -27145,6 +27153,46 @@
           ]
         },
         {
+          "name": "GoldStarNuvem",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.02500000037252903,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Gold star.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "GoldStarBat",
           "tags": "",
           "type": "Sprite",
@@ -27187,7 +27235,7 @@
         {
           "bold": false,
           "italic": false,
-          "name": "StarterMessage",
+          "name": "txt",
           "smoothed": true,
           "tags": "",
           "type": "TextObject::Text",
@@ -27195,7 +27243,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "Hello, my name is Suzie \nand i have to find my friend Tiago, the Bat. \nCan you help me please?",
+          "string": "Text",
           "font": "",
           "characterSize": 20,
           "color": {
@@ -27203,68 +27251,6 @@
             "g": 0,
             "r": 0
           }
-        },
-        {
-          "bottomMargin": 0,
-          "height": 32,
-          "leftMargin": 0,
-          "name": "StarterMessageCloud",
-          "rightMargin": 0,
-          "tags": "",
-          "texture": "",
-          "tiled": true,
-          "topMargin": 0,
-          "type": "PanelSpriteObject::PanelSprite",
-          "width": 32,
-          "variables": [],
-          "effects": [],
-          "behaviors": []
-        },
-        {
-          "name": "CloudStart",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [
-            {
-              "name": "DestroyOutside",
-              "type": "DestroyOutsideBehavior::DestroyOutside",
-              "extraBorder": 0
-            }
-          ],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.02500000037252903,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "cloud (5).png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
         }
       ],
       "events": [
@@ -27280,6 +27266,14 @@
                 ""
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": [],
+              "subInstructions": []
             }
           ],
           "actions": [
@@ -27291,6 +27285,201 @@
               "parameters": [
                 "Obstacle",
                 "\"Obstacle\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "DialogueTree::LoadDialogueFromJsonFile"
+              },
+              "parameters": [
+                "",
+                "Dialogue.json"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "DialogueTree::StartDialogueFromBranch"
+              },
+              "parameters": [
+                "\"Start\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "txt",
+                "4",
+                "445",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DialogueTree::IsDialogueLineType"
+              },
+              "parameters": [
+                "\"text\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DialogueTree::ScrollClippedText"
+              },
+              "parameters": [],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "txt",
+                "=",
+                "DialogueTree::ClippedLineText()"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "DialogueTree::HasClippedTextScrollingCompleted"
+                  },
+                  "parameters": [],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Return"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": [],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "DialogueTree::GoToNextLine"
+                  },
+                  "parameters": [],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DialogueTree::IsDialogueRunning"
+              },
+              "parameters": [],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "Mindy",
+                "TopDownMovement",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "DialogueTree::IsDialogueRunning"
+              },
+              "parameters": [],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "KeyReleased"
+              },
+              "parameters": [
+                "",
+                "Return"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Delete"
+              },
+              "parameters": [
+                "txt",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "Mindy",
+                "TopDownMovement",
+                "yes"
               ],
               "subInstructions": []
             }
@@ -28071,14 +28260,48 @@
                 "\"scnRegisto\""
               ],
               "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "GoldStarNuvem",
+                "Mindy",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Delete"
+              },
+              "parameters": [
+                "GoldStarNuvem",
+                ""
+              ],
+              "subInstructions": []
             },
             {
               "type": {
                 "inverted": false,
-                "value": "Arreter"
+                "value": "PushScene"
               },
               "parameters": [
-                "Mindy"
+                "",
+                "\"StartScreenNuvens\""
               ],
               "subInstructions": []
             }
@@ -67650,7 +67873,7 @@
                 "value": "SendAsyncRequest"
               },
               "parameters": [
-                "\"https://3ac0-188-83-14-36.eu.ngrok.io/questionario/5/1\"",
+                "\"https://4a2a-2001-8a0-e406-b701-e19a-6f32-ad04-574b.eu.ngrok.io/questionario/5/1\"",
                 "\"Content-type:application/json\"",
                 "\"GET\"",
                 "\"\"",
