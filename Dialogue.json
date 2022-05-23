@@ -4,9 +4,50 @@
 		"tags": "",
 		"body": "Olá, precisamos da tua ajuda para escapar! \nTemos de encontrar o Morcego!",
 		"position": {
-			"x": 502,
-			"y": 92
+			"x": 288,
+			"y": -69
+		},
+		"colorID": 8
+	},
+	{
+		"title": "Registo (Morcego)",
+		"tags": "",
+		"body": "Finalmenteeeeeeee!\nNunca mais chegavas!\nEntra na tua conta para podermos jogar!\nSe não tiveres, podes sempre criar uma nova!",
+		"position": {
+			"x": 537,
+			"y": -71
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Login Feito",
+		"tags": "",
+		"body": "Agora já podemos sair daqui...\nO meu nome é Bartolas e eu vou ajudar-te nesta aventura!",
+		"position": {
+			"x": 776,
+			"y": -77
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Cobra",
+		"tags": "",
+		"body": "Cuidado...\nVi alguma coisa a mexer-se naqueles arbustos!!!\nVamos lá ver o que se passa...",
+		"position": {
+			"x": 289,
+			"y": 181
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Scratch",
+		"tags": "",
+		"body": "Ouvi um barulho ali, vamos la ver o que se passa?",
+		"position": {
+			"x": 500,
+			"y": 60
 		},
 		"colorID": 0
 	}
+	
 ]
